@@ -9,35 +9,66 @@
 </head>
 
 <body>
-    <div class="container mn_wrapper">
-        <div class="step" id="step0">
-            <h1>Getting Started</h1>
-            <p>Thanks for your interest. Here are some things you might want to have handy in order to complete this form.</p>
-        </div>
-        <div class="step" id="step1">
-            <form role="form" class="validate" action="http://hftcmcfcs1.cloudapp.net/mcneilly/Test" method="GET" >
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control validate[required, custom[email]" id="exampleInputEmail1" placeholder="Enter email" name="email">
+    <form role="form" class="validate" action="http://hftcmcfcs1.cloudapp.net/mcneilly/Test" method="GET" >            
+    <div class="container">
+        <form class="mn_form" role="form">
+            <div class="step" id="step0">
+                <h1>Getting Started</h1>
+                <p>Thanks for your interest. Here are some things you might want to have handy in order to complete this form.</p>
+            </div>
+            <div class="step" id="step1">
+                <p class="text-right validation_sign"><i class="fa fa-exclamation-circle"></i> Required Field</p>
+                <fieldset>
+                    <legend>Child's Information</legend>
+                    <div class="form-group">
+                        <label for="child_first_name_0">First Name <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                        <input type="text" class="form-control" id="child_first_name_0" name="child_first_name_0" placeholder="John">
+                    </div>
+                    <div class="form-group">
+                        <label for="child_last_name_0">Last Name <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                        <input type="text" class="form-control" id="child_last_name_0" name="child_last_name_0" placeholder="Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="child_dob_0">Date of Birth <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                        <input type="text" class="form-control" id="child_dob_0" name="child_dob_0" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="form-group">
+                        <label for="child_ssn_0">Social Security Number <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                        <input type="text" class="form-control" id="child_ssn_0" name="child_ssn_0" placeholder="XXX-XX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for='child_gender_0'>Gender <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                        <select class="form-control" id="child_gender_0" name="child_gender_0">
+                            <option>Please Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for='child_ethnicity_0'>Ethnicity / Race</label>
+                        <select class="form-control" id="child_ethnicity_0" name="child_ethnicity_0">
+                            <option>Please Select</option>
+                            <option value="native_american">American Indian or Alaskan Native</option>
+                            <option value="asian">Asian</option>
+                            <option value="black">Black or African American</option>
+                            <option value="hispanic">Hispanic or Latino</option>
+                            <option value="islander">Native Hawaiian or Other Pacific Islander</option>
+                            <option value="white">White</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <div class="clone_button">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Add another child</button>
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+                <div class="submit_button">
+                    <button type="submit" class="btn btn-default">Submit</button>
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputFile">File input</label>
-                  <input type="file" id="exampleInputFile">
-                  <p class="help-block">Example block-level help text here.</p>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" name="checkbox"> Check me out
-                  </label>
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-              </form>
-        </div>
+                <!--<fieldset>
+                    <legend></legend>
+                </fieldset>-->
+            </div>
     </div> <!-- end container -->
+           </form>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="../js/formToWizard.js"></script>
