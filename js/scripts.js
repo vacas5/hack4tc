@@ -54,33 +54,32 @@ $(function() {
             promptText: "Required"
         }
      });
-
     /* Add/Remove Fields Initialization */
     // Add the "onclick" event to the "Add" link
     $('#btnAdd').click(function(e) {
         e.preventDefault();
-        addFields('.clonedInput', 5, this, '#btnDel');
+        addFields('fieldset', 8, this, '#btnDel');
     });
     // Add the "onclick" event to the "Delete" link
     $('#btnDel').click(function(e) {
         e.preventDefault();
-        deleteFields('.clonedInput', '#btnAdd', this);
+        deleteFields('fieldset', '#btnAdd', this);
     });
     // Hide the "Delete" link
     $('#btnDel').prop('disabled', true);
 /* Add/Remove Fields Initialization */
     // Add the "onclick" event to the "Add" link
-    $('#btnTableAdd').click(function(e) {
-        e.preventDefault();
-        addFields('.clonedTableInput', 5, this, '#btnTableDel');
-    });
-    // Add the "onclick" event to the "Delete" link
-    $('#btnTableDel').click(function(e) {
-        e.preventDefault();
-        deleteFields('.clonedTableInput', '#btnTableAdd', this);
-    });
-    // Hide the "Delete" link
-    $('#btnTableDel').prop('disabled', true);
+    //$('#btnTableAdd').click(function(e) {
+    //    e.preventDefault();
+    //    addFields('.clonedTableInput', 5, this, '#btnTableDel');
+    //});
+    //// Add the "onclick" event to the "Delete" link
+    //$('#btnTableDel').click(function(e) {
+    //    e.preventDefault();
+    //    deleteFields('.clonedTableInput', '#btnTableAdd', this);
+    //});
+    //// Hide the "Delete" link
+    //$('#btnTableDel').prop('disabled', true);
 
 
 });
