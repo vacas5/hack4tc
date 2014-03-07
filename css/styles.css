@@ -1,3 +1,7 @@
-.mn_wrapper {
+.mn_form {
     max-width: 500px;
+    margin: 0 auto;
+}
+.validation_sign {
+    color: #F0AD4E;
 }
