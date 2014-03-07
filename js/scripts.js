@@ -49,6 +49,9 @@ function deleteFields(clonedStructures, addElement, deleteElement) {
         $(deleteElement).prop('disabled', true);
     }
 }
+function goToPrev() {
+    //code
+}
 
 $(function() {
      /* Validation */
@@ -57,6 +60,36 @@ $(function() {
             promptText: "Required"
         }
      });
+     $('body').on('click', '#tab-previous', function(e) {
+        e.preventDefault();
+        var $tabPanes = $('.tab-pane');
+        var $activeTab = $('.tab-pane.active');
+        var $activeTabId = $activeTab.attr('id').slice(-1);
+
+        console.log($activeTabId);
+        if ($activeTabId == 0) {
+            $('#tab-previous').prop('disabled');
+        }
+        else {
+            $activeTab.removeClass('active');
+            $($tabPanes[$activeTabId - 1]).addClass('active');
+        }
+    });
+     $('body').on('click', '#tab-next', function(e) {
+        e.preventDefault();
+        var $tabPanes = $('.tab-pane');
+        var $activeTab = $('.tab-pane.active');
+        var $activeTabId = $activeTab.attr('id').slice(-1);
+        var position = parseInt($activeTabId);
+        console.log(position + 1, $tabPanes);
+        if ($activeTabId == $tabPanes.length) {
+            $('#tab-next').prop('disabled');
+        }
+        else {
+            $activeTab.removeClass('active');
+            $($tabPanes[position + 1]).addClass('active');
+        }
+    });
     /* Add/Remove Fields Initialization */
     // Add the "onclick" event to the "Add" link
     $('#btnAdd').click(function(e) {
