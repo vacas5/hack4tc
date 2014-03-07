@@ -1,6 +1,4 @@
-$('#email_disclaimer').popover({
-    html: true
-});
+$('#email_disclaimer').popover();
 
 /*----------- 07. ADD/REMOVE FIELDS ----------------- */
 function addFields(clonedStructures, maxStructures, addElement, deleteElement) {

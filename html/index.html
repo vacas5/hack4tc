@@ -13,16 +13,25 @@
 
     <form role="form" class="validate" action="http://hftcmcfcs1.cloudapp.net/mcneilly/Test" method="GET" >
 
-        <div class="container">
+        <div class="container mn_form">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#step0" data-toggle="tab">Getting Started</a></li>
-                <li><a href="#step1" data-toggle="tab">Child's Information</a></li>
-                <li><a href="#step2" data-toggle="tab">Parent/Guardian Information</a></li>
+                <li><a href="#step1" data-toggle="tab">Child Information</a></li>
+                <li><a href="#step2" data-toggle="tab">Parent Information</a></li>
             </ul>
             <div class="tab-content">
                 <div class="step tab-pane active" id="step0">
                     <h1>Getting Started</h1>
-                    <p>Thanks for your interest. Here are some things you might want to have handy in order to complete this form.</p>
+                    <p>Thank you for your interest in enrolling your child at McNeilly Center for Children!</p>
+                    <p>Please complete the following form to secure a spot on our waiting list, and you will be contacted if space for your child(ren) becomes available.</p>
+                    <p>Please have the following information available before you begin:</p>
+                    <ul>
+                        <li>Social security numbers for you and your children</li>
+                        <li>Contact phone numbers and addresses</li>
+                        <li>Insurance information</li>
+                        <li>Household income information</li>
+                        <li>Assistance case numbers (if applicable)</li>
+                    </ul>
                 </div>
                 <div class="step tab-pane" id="step1">
                     <p class="text-right validation_sign"><i class="fa fa-exclamation-circle"></i> Required Field</p>
@@ -65,8 +74,10 @@
                             </select>
                         </div>
                     </fieldset>
-                    <button type="button" class="btn btn-primary" id="btnAdd"><i class="fa fa-plus-circle"></i> Add another child</button>
-                    <button type="button" class="btn btn-warning" id="btnDel"><i class="fa fa-minus-circle"></i> Delete child information</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary" id="btnAdd"><i class="fa fa-plus-circle"></i> Add another child</button>
+                        <button type="button" class="btn btn-warning" id="btnDel"><i class="fa fa-minus-circle"></i> Delete child information</button>
+                    </div>
                 </div> <!-- end tab pane -->
                 <div class="step tab-pane" id="step2">
                     <p class="text-right validation_sign"><i class="fa fa-exclamation-circle"></i> Required Field</p>
@@ -168,7 +179,15 @@
                         </div>
                         <div class="form-group">
                             <label for="parent_zip_0">Zip Code <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                            <input type="text" class="form-control" id="parent_zip_0" name="parent_zip_0" placeholder="XXXXX" maxlength="5">
+                            <input type="text" class="form-control" id="parent_zip_0" name="parent_zip_0" placeholder="xxxxx" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="parent_mobile_0">Mobile Phone <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                            <input type="tel" class="form-control" id="parent_mobile_0" name="parent_mobile_0" placeholder="(xxx) xxx-xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="parent_other_phone_0">Other Phone</label>
+                            <input type="tel" class="form-control" id="parent_other_phone_0" name="parent_other_phone_0" placeholder="(xxx) xxx-xxxx">
                         </div>
                         <div class="form-group">
                             <label for="parent_email_0">Email Address</label>
@@ -176,10 +195,20 @@
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="parent_email_optin_0" checked="checked"> Please send me updates about McNeilly Center <span class="mn_popover" id="email_disclaimer" data-container="body" data-toggle="popover" data-placement="top" data-content="We respect your privacy and do not tolerate spam and will never sell, rent, lease or give away your information (name, address, email, etc.) to any third party. Nor will we send you unsolicited email. If you choose to provide your cell phone number and/or email address, then we will send you notifications relating to your child, classroom activities, or important notifications (i.e. weather closings). You will have the option to opt out of notifications at any time.">by email</span>.
+                                <input type="checkbox" name="parent_email_optin_0" checked="checked"> Please send me important updates by email.
                             </label>
                         </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="parent_email_optin_0" checked="checked"> Please send me important updates by text message.
+                            </label>
+                        </div>
+                        <p class="help-block mn_popover" id="email_disclaimer" data-container="body" data-toggle="popover" data-placement="top" data-content="We respect your privacy and do not tolerate spam and will never sell, rent, lease or give away your information (name, address, email, etc.) to any third party. Nor will we send you unsolicited email. If you choose to provide your cell phone number and/or email address, then we will send you notifications relating to your child, classroom activities, or important notifications (i.e. weather closings). You will have the option to opt out of notifications at any time.">How will you use this information?</p>
                     </fieldset>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary" id="btnAdd"><i class="fa fa-plus-circle"></i> Add another parent or guardian</button>
+                        <button type="button" class="btn btn-warning" id="btnDel"><i class="fa fa-minus-circle"></i> Delete parent information</button>
+                    </div>
                 </div>
                 <div class="nextPrev clearFix">
                     <a href="#step0" class="btn btn-default" data-toggle="tab">Previous Step</a>

@@ -1,6 +1,7 @@
 .mn_form {
     max-width: 500px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 .validation_sign {
     color: #F0AD4E;
