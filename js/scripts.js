@@ -1,6 +1,11 @@
 $('#email_disclaimer').popover();
 toggleForm();
 
+$('#income_monthly_0').change(function() {
+    var value = parseInt($(this).val()) * 12;
+    $('#income_annual_0').val(value);
+});
+
 function toggleForm() {
     $('input[data-toggle="form-collapse"]').each(function() {
         var self = this;
