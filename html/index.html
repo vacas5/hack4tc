@@ -228,8 +228,25 @@
                                 No
                             </label>
                         </div>
-                        <div id="family_first_no" class="collapse">
-                            <h1>HELLO!</h1>
+                        <div id="family_first_no" class="">
+                            <div class="form-group">
+                                <label for="income_members_0">Total Number of Household Members</label>
+                                <input type="number" class="form-control" id="income_members_0" name="income_members_0" placeholder="xx" maxlength="2">
+                            </div>
+                            <div class="form-group">
+                                <label for="income_monthly_0">Monthly income of household from all sources</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">$</span>
+                                    <input type="number" class="form-control" id="income_monthly_0" name="income_monthly_0" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group hidden">
+                                <label for="income_annual_0">Annual income of household from all sources</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">$</span>
+                                    <input type="number" class="form-control" id="income_annual_0" name="income_annual_0" placeholder="">
+                                </div>
+                            </div>
                         </div>
                     </fieldset>
                 </div>
