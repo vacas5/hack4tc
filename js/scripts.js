@@ -1,4 +1,27 @@
 $('#email_disclaimer').popover();
+toggleForm();
+
+function toggleForm() {
+    $('input[data-toggle="form-collapse"]').each(function() {
+        var self = this;
+        var type = $(this).attr('type');
+        var target = $(this).data('target');
+
+        switch (type) {
+            case 'radio':
+                var name = $(this).attr('name');
+
+                $('[name="' + name + '"]').change(function() {
+                    if ($(self).is(':checked')) {
+                        $(target).addClass('in');
+                    } else {
+                        $(target).removeClass('in');
+                    }
+                });
+                break;
+        }
+    });
+}
 
 /*----------- 07. ADD/REMOVE FIELDS ----------------- */
 function addFields(clonedStructures, maxStructures, addElement, deleteElement) {
