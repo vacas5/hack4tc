@@ -17,6 +17,7 @@
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#step0" data-toggle="tab">Getting Started</a></li>
                 <li><a href="#step1" data-toggle="tab">Child's Information</a></li>
+                <li><a href="#step2" data-toggle="tab">Parent/Guardian Information</a></li>
             </ul>
             <div class="tab-content">
                 <div class="step tab-pane active" id="step0">
@@ -66,7 +67,9 @@
                     </fieldset>
                     <button type="button" class="btn btn-primary" id="btnAdd"><i class="fa fa-plus-circle"></i> Add another child</button>
                     <button type="button" class="btn btn-warning" id="btnDel"><i class="fa fa-minus-circle"></i> Delete child information</button>
-
+                </div> <!-- end tab pane -->
+                <div class="step tab-pane" id="step2">
+                    <p class="text-right validation_sign"><i class="fa fa-exclamation-circle"></i> Required Field</p>
                     <fieldset>
                         <legend>Parent/Guardian Information</legend>
                         <p class="help-block">This person will serve as the primary contact.</p>
