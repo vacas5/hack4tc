@@ -107,11 +107,14 @@ function nextPrev() {
             $activeTab.removeClass('active');
             $($tabPanes[position + 1]).addClass('active');
         }
+        if ($('#step3').hasClass('active')) {
+            console.log('it is active')
+            $('#tab-next').addClass('hidden');
+            $('.submit_button').removeClass('hidden');
+        }
     });
-    if ($('#step3').hasClass('active')) {
-        $('#tab-next').addClass('hidden');
-        $('.submit_button').removeClass('hidden');
-    }
+    console.log($('#step3').hasClass('active'));
+
 }
 
 $(function() {
