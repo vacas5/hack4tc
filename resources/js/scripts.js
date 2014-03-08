@@ -32,7 +32,7 @@ function toggleForm() {
 function addFields(cStructures, maxStructures, addElement, deleteElement) {
     // Variables
     var clonedStructures = $(cStructures);
-    var index = clonedStructures.length + 1;
+    var index = clonedStructures.length;
     var lastClonedStructure = clonedStructures.last();
     // Logic
     if (clonedStructures.length <= (maxStructures)) {
@@ -44,7 +44,7 @@ function addFields(cStructures, maxStructures, addElement, deleteElement) {
             $(this).attr({
                 'name': thisName + index,
                 'id': thisID + index,
-				'value': ''
+		'value': ''
             });
         });
         // Find all labels and update the "index number" at the end of each "for" attribute
@@ -65,6 +65,7 @@ function deleteFields(cStructures, addElement, deleteElement) {
     // Variables
     var clonedStructures = $(cStructures);
     var lastClonedStructure = clonedStructures.last();
+    console.log(lastClonedStructure);
     // If there are 2 or more fieldsets, remove the last fieldset
     if (clonedStructures.length >= 2) {
         lastClonedStructure.remove();
@@ -141,14 +142,18 @@ $(function() {
     nextPrev();
     /* Add/Remove Fields Initialization */
     // Add the "onclick" event to the "Add" link
-    $('#btnAdd').click(function(e) {
+    $('.btnAdd').click(function(e) {
         e.preventDefault();
-        addFields('fieldset', 8, this, '#btnDel');
+	console.log(this);
+	var closestFieldset = $(e.currentTarget).closest('.step').find('fieldset');
+	console.log(closestFieldset);
+        addFields(closestFieldset, 8, this, '.btnDel');
     });
     // Add the "onclick" event to the "Delete" link
-    $('#btnDel').click(function(e) {
+    $('.btnDel').click(function(e) {
         e.preventDefault();
-        deleteFields('fieldset', '#btnAdd', this);
+	var closestFieldset = $(e.currentTarget).closest('.step').find('fieldset');
+        deleteFields(closestFieldset, '.btnAdd', this);
     });
     // Hide the "Delete" link
     $('#btnDel').prop('disabled', true);

@@ -84,8 +84,8 @@
                         </div>
                     </fieldset>
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary" id="btnAdd"><i class="fa fa-plus-circle"></i> Add another child</button>
-                        <button type="button" class="btn btn-warning" id="btnDel"><i class="fa fa-minus-circle"></i> Delete child information</button>
+                        <button type="button" class="btn btn-primary btnAdd"><i class="fa fa-plus-circle"></i> Add another child</button>
+                        <button type="button" class="btn btn-warning btnDel"><i class="fa fa-minus-circle"></i> Delete child information</button>
                     </div>
                 </div> <!-- end step -->
                 <div class="step tab-pane" id="step2">
@@ -204,16 +204,16 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="parent_email_0" class="control-label">Email Address</label>
-                                    <input type="email" class="form-control validate[required, custom[email]]" id="parent_email_0" name="parent_email_0" placeholder="yourname@example.com">
+                                    <input type="email" class="form-control validate[optional, custom[email]]" id="parent_email_0" name="parent_email_0" placeholder="yourname@example.com">
                                 </div>
                                 <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="parent_email_optin_0" checked="checked"> Please send me important updates by email.
+                                    <label for="parent_email_optin_0">
+                                        <input type="checkbox" name="parent_email_optin_0" checked="checked" id="parent_email_optin_0"> Please send me important updates by email.
                                     </label>
                                 </div>
                                 <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="parent_email_optin_0" checked="checked"> Please send me important updates by text message.
+                                    <label for="parent_text_optin_0">
+                                        <input type="checkbox" name="parent_text_optin_0" checked="checked" id="parent_text_optin_0"> Please send me important updates by text message.
                                     </label>
                                 </div>
                                 <p class="mn_popover" id="email_disclaimer" data-container="body" data-toggle="popover" data-placement="top" data-content="We respect your privacy and do not tolerate spam and will never sell, rent, lease or give away your information (name, address, email, etc.) to any third party. Nor will we send you unsolicited email. If you choose to provide your cell phone number and/or email address, then we will send you notifications relating to your child, classroom activities, or important notifications (i.e. weather closings). You will have the option to opt out of notifications at any time.">How will you use this information?</p>
@@ -221,8 +221,8 @@
                         </div>
                     </fieldset>
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary" id="btnAdd"><i class="fa fa-plus-circle"></i> Add another parent or guardian</button>
-                        <button type="button" class="btn btn-warning" id="btnDel"><i class="fa fa-minus-circle"></i> Delete parent information</button>
+                        <button type="button" class="btn btn-primary btnAdd"><i class="fa fa-plus-circle"></i> Add another parent or guardian</button>
+                        <button type="button" class="btn btn-warning btnDel"><i class="fa fa-minus-circle"></i> Delete parent information</button>
                     </div>
                 </div> <!-- end step -->
                 <div class="step tab-pane" id="step3">
