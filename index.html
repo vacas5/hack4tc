@@ -2,36 +2,38 @@
 
 <html>
 <head>
-    <title>Page Title</title>
+    <title>Enrollment Form</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="resources/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-
-
-    <form role="form" class="validate" action="http://hftcmcfcs1.cloudapp.net/mcneilly/Test" method="GET" >
-
-        <div class="container mn_form">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#step0" data-toggle="tab">Getting Started</a></li>
-                <li><a href="#step1" data-toggle="tab">Child Information</a></li>
-                <li><a href="#step2" data-toggle="tab">Parent Information</a></li>
-                <li><a href="#step3" data-toggle="tab">Income Eligibility</a></li>
+    <div class="mn_wrapper">
+        <h1 class="mn_logo">
+            <img src="resources/images/logo.jpg" alt="McNeilly Center for Children">
+        </h1>
+        <form role="form" class="validate mn_form" action="http://hftcmcfcs1.cloudapp.net/mcneilly/Test" method="GET">
+        <!--<div class="container mn_form">-->
+            <ul class="nav nav-pills collapse in">
+                <li class="active"><a href="#step0" data-toggle="pill">Getting Started</a></li>
+                <li><a href="#step1" data-toggle="pill">Child Information</a></li>
+                <li><a href="#step2" data-toggle="pill">Parent Information</a></li>
+                <li><a href="#step3" data-toggle="pill">Income Eligibility</a></li>
             </ul>
             <div class="tab-content">
                 <div class="step tab-pane active" id="step0">
-                    <h1>Getting Started</h1>
+                    <h2>Getting Started</h2>
                     <p>Thank you for your interest in enrolling your child at McNeilly Center for Children!</p>
                     <p>Please complete the following form to secure a spot on our waiting list, and you will be contacted if space for your child(ren) becomes available.</p>
                     <p>Please have the following information available before you begin:</p>
-                    <ul>
-                        <li>Social security numbers for you and your children</li>
-                        <li>Contact phone numbers and addresses</li>
-                        <li>Insurance information</li>
-                        <li>Household income information</li>
-                        <li>Assistance case numbers (if applicable)</li>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-user"></i> Social security numbers for you and your children</li>
+                        <li><i class="fa fa-home"></i> Contact phone numbers and addresses</li>
+                        <li><i class="fa fa-credit-card"></i> Insurance information</li>
+                        <li><i class="fa fa-money"></i> Household income information</li>
+                        <li><i class="fa fa-info-circle"></i> Assistance case numbers (if applicable)</li>
                     </ul>
                 </div> <!-- end step -->
                 <div class="step tab-pane" id="step1">
@@ -204,7 +206,7 @@
                                 <input type="checkbox" name="parent_email_optin_0" checked="checked"> Please send me important updates by text message.
                             </label>
                         </div>
-                        <p class="help-block mn_popover" id="email_disclaimer" data-container="body" data-toggle="popover" data-placement="top" data-content="We respect your privacy and do not tolerate spam and will never sell, rent, lease or give away your information (name, address, email, etc.) to any third party. Nor will we send you unsolicited email. If you choose to provide your cell phone number and/or email address, then we will send you notifications relating to your child, classroom activities, or important notifications (i.e. weather closings). You will have the option to opt out of notifications at any time.">How will you use this information?</p>
+                        <p class="mn_popover" id="email_disclaimer" data-container="body" data-toggle="popover" data-placement="top" data-content="We respect your privacy and do not tolerate spam and will never sell, rent, lease or give away your information (name, address, email, etc.) to any third party. Nor will we send you unsolicited email. If you choose to provide your cell phone number and/or email address, then we will send you notifications relating to your child, classroom activities, or important notifications (i.e. weather closings). You will have the option to opt out of notifications at any time.">How will you use this information?</p>
                     </fieldset>
                     <div class="btn-group">
                         <button type="button" class="btn btn-primary" id="btnAdd"><i class="fa fa-plus-circle"></i> Add another parent or guardian</button>
@@ -215,7 +217,7 @@
                     <p class="text-right validation_sign"><i class="fa fa-exclamation-circle"></i> Required Field</p>
                     <fieldset>
                         <legend>Income Eligibility</legend>
-                        <label>Is anyone from your household receiving benefits from <i>Family First</i>?</label>
+                        <label>Is anyone from your household receiving benefits from <i>Family First</i>? <i class="fa fa-exclamation-circle validation_sign"></i></label>
                         <div class="radio">
                             <label>
                                 <input type="radio" name="income_family_first_0" value="yes">
@@ -228,7 +230,7 @@
                                 No
                             </label>
                         </div>
-                        <div id="family_first_no" class="">
+                        <div id="family_first_no" class="collapse">
                             <div class="form-group">
                                 <label for="income_members_0">Total Number of Household Members</label>
                                 <input type="number" class="form-control" id="income_members_0" name="income_members_0" placeholder="xx" maxlength="2">
@@ -240,6 +242,7 @@
                                     <input type="number" class="form-control" id="income_monthly_0" name="income_monthly_0" placeholder="">
                                 </div>
                             </div>
+                            <p class="mn_popover" id="income_disclaimer" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Household income should include earnings from work (before deductions), child support or alimony, payments received from pensions, retirement, and social security, or any other income for all household members.  Please include total yearly income for all household sources, and total number of household members.">What should I include?</p>
                             <div class="form-group hidden">
                                 <label for="income_annual_0">Annual income of household from all sources</label>
                                 <div class="input-group">
@@ -259,8 +262,9 @@
                 </div>
             </div>
             <!-- end tab-content -->
-        </div> <!-- end container -->
-    </form>
+        <!--</div>--> <!-- end container -->
+        </form>
+    </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="resources/js/formToWizard.js"></script>
