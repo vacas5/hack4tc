@@ -15,13 +15,13 @@
         <img src="resources/images/logo.jpg" alt="McNeilly Center for Children">
     </h1>
     <div class="mn_wrapper">
-        <form role="form" class="validate mn_form" id="validate" action="http://hftcmcfcs1.cloudapp.net/mcneilly/Test" method="GET">
+        <form role="form" class="validate mn_form" id="validate" action="/Test" method="POST">
             <ul class="nav nav-pills collapse in">
-                <li class="active"><a href="#step0" data-toggle="pill"><i class="fa fa-info-circle fa-3x"></i></a></li>
-                <li><a href="#step1" data-toggle="pill"><i class="fa fa-user fa-3x"></i></a></li>
-                <li><a href="#step2" data-toggle="pill"><i class="fa fa-home fa-3x"></i></a></li>
-                <li><a href="#step3" data-toggle="pill"><i class="fa fa-money fa-3x"></i></a></li>
-                <li><a href="#step4" data-toggle="pill"><i class="fa fa-thumbs-o-up fa-3x"></i></a></li>
+                <li class="active"><a href="#step0" data-toggle="pill"><i class="fa fa-info-circle fa-2x"></i></a></li>
+                <li><a href="#step1" data-toggle="pill"><i class="fa fa-user fa-2x"></i></a></li>
+                <li><a href="#step2" data-toggle="pill"><i class="fa fa-home fa-2x"></i></a></li>
+                <li><a href="#step3" data-toggle="pill"><i class="fa fa-money fa-2x"></i></a></li>
+                <li><a href="#step4" data-toggle="pill"><i class="fa fa-thumbs-o-up fa-2x"></i></a></li>
             </ul>
             <div class="tab-content">
                 <div class="step tab-pane active" id="step0">
@@ -36,9 +36,9 @@
                             <ul class="list-unstyled well">
                                 <li><i class="fa fa-user fa-fw fa-2x"></i> Social security numbers for you and your children</li>
                                 <li><i class="fa fa-home fa-fw fa-2x"></i> Contact phone numbers and addresses</li>
-                                <li><i class="fa fa-credit-card fa-fw fa-2x"></i> Insurance information</li>
                                 <li><i class="fa fa-money fa-fw fa-2x"></i> Household income information</li>
                                 <li><i class="fa fa-info-circle fa-fw fa-2x"></i> Assistance case numbers (if applicable)</li>
+                                <li><i class="fa fa-thumbs-o-up fa-fw fa-2x"></i></li>
                             </ul>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                     </fieldset>
                     <div class="form-group">
                         <button type="button" class="btn btn-primary btnAdd"><i class="fa fa-plus-circle"></i> Add another child</button>
-                        <button type="button" class="btn btn-warning btnDel"><i class="fa fa-minus-circle"></i> Delete child information</button>
+                        <button type="button" class="btn btn-warning btnDel" disabled><i class="fa fa-minus-circle"></i> Delete child information</button>
                     </div>
                 </div> <!-- end step -->
                 <div class="step tab-pane" id="step2">
@@ -229,7 +229,7 @@
                     </fieldset>
                     <div class="form-group">
                         <button type="button" class="btn btn-primary btnAdd"><i class="fa fa-plus-circle"></i> Add another parent or guardian</button>
-                        <button type="button" class="btn btn-warning btnDel"><i class="fa fa-minus-circle"></i> Delete parent information</button>
+                        <button type="button" class="btn btn-warning btnDel" disabled><i class="fa fa-minus-circle"></i> Delete parent information</button>
                     </div>
                 </div> <!-- end step -->
                 <div class="step tab-pane" id="step3">

@@ -134,13 +134,13 @@ $(function() {
 	console.log(this);
 	var closestFieldset = $(e.currentTarget).closest('.step').find('fieldset');
 	console.log(closestFieldset);
-        addFields(closestFieldset, 8, this, '.btnDel');
+        addFields(closestFieldset, 8, e.currentTarget, '.btnDel');
     });
     // Add the "onclick" event to the "Delete" link
     $('.btnDel').click(function(e) {
         e.preventDefault();
-	var closestFieldset = $(e.currentTarget).closest('.step').find('fieldset');
-        deleteFields(closestFieldset, '.btnAdd', this);
+	var closestFieldset = $(e.currentTarget).closest('.step').children('fieldset');
+        deleteFields(closestFieldset, '.btnAdd', e.currentTarget);
     });
     // Hide the "Delete" link
     $('#btnDel').prop('disabled', true);

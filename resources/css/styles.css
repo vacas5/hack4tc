@@ -12,6 +12,17 @@ body {
 }
 h1, h2, h3, h4, h5, h6, legend {
     font-family: 'Overlock', cursive;
+    text-align:center;
+}
+a {
+    color:#002c73;
+}
+a:hover {
+    color:#707170;
+}
+.btn-primary {
+    background-color:#002c73;
+    border-color:#002c73;
 }
 .mn_wrapper {
     padding:0 10px 15px;
@@ -27,6 +38,14 @@ h1, h2, h3, h4, h5, h6, legend {
 }
 .nav-pills {
     padding: 15px 0;
+    text-align:center;
+}
+.nav-pills > li {
+    display:inline-block;
+    float:none;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    background-color:#002c73;
 }
 .validation_sign {
     color: #F0AD4E;
