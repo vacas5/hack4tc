@@ -58,11 +58,11 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="child_ssn_0" class="control-label">Social Security Number <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                                    <input type="text" class="form-control validate[required,custom[number]]" id="child_ssn_0" name="child_ssn_0" placeholder="XXX-XX-XXXX">
+                                    <input type="text" class="form-control validate[required,custom[ssn]]" id="child_ssn_0" name="child_ssn_0" placeholder="XXX-XX-XXXX">
                                 </div>
                                 <div class="form-group">
-                                    <label for='child_gender_0'>Gender <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                                    <select class="form-control" id="child_gender_0" name="child_gender_0">
+                                    <label for='child_gender_0' class="control-label">Gender <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <select class="form-control validate[required]" id="child_gender_0" name="child_gender_0">
                                         <option>Please Select</option>
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
@@ -96,8 +96,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for='parent_relationship_0'>Relationship <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                                    <select class="form-control" id="parent_relationship_0" name="parent_relationship_0">
+                                    <label for='parent_relationship_0' class="control-label">Relationship <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <select class="form-control validate[required]" id="parent_relationship_0" name="parent_relationship_0">
                                         <option>Please Select</option>
                                         <option value="mother">Mother</option>
                                         <option value="father">Father</option>
@@ -105,36 +105,36 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for='parent_marital_status_0'>Marital Status <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                                    <select class="form-control" id="parent_marital_status_0" name="parent_marital_status_0">
+                                    <label for='parent_marital_status_0' class="control-label">Marital Status <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <select class="form-control validate[required]" id="parent_marital_status_0" name="parent_marital_status_0">
                                         <option>Please Select</option>
                                         <option value="married">Married</option>
                                         <option value="single">Single</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="parent_first_name_0">First Name <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                                    <input type="text" class="form-control" id="parent_first_name_0" name="parent_first_name_0" placeholder="John">
+                                    <label for="parent_first_name_0" class="control-label">First Name <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="text" class="form-control validate[required]" id="parent_first_name_0" name="parent_first_name_0" placeholder="John">
                                 </div>
                                 <div class="form-group">
-                                    <label for="parent_last_name_0">Last Name <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                                    <input type="text" class="form-control" id="parent_last_name_0" name="parent_last_name_0" placeholder="Doe">
+                                    <label for="parent_last_name_0" class="control-label">Last Name <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="text" class="form-control validate[required]" id="parent_last_name_0" name="parent_last_name_0" placeholder="Doe">
                                 </div>
                                 <div class="form-group">
-                                    <label for="parent_address_0">Address <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                                    <input type="text" class="form-control" id="parent_address_0" name="parent_address_0" placeholder="123 Main St">
+                                    <label for="parent_address_0" class="control-label">Address <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="text" class="form-control validate[required]" id="parent_address_0" name="parent_address_0" placeholder="123 Main St">
                                 </div>
                                 <div class="form-group">
                                     <label for="parent_addressTwo_0">Address Line 2</label>
                                     <input type="text" class="form-control" id="parent_addressTwo_0" name="parent_addressTwo_0" placeholder="Apt #">
                                 </div>
                                 <div class="form-group">
-                                    <label for="parent_city_0">City <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                                    <input type="text" class="form-control" id="parent_city_0" name="parent_city_0" placeholder="Nashville">
+                                    <label for="parent_city_0" class="control-label">City <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="text" class="form-control validate[required]" id="parent_city_0" name="parent_city_0" placeholder="Nashville">
                                 </div>
                                 <div class="form-group">
-                                    <label for='parent_state_0'>State <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                                    <select class="form-control" id="parent_state_0" name="parent_state_0">
+                                    <label for='parent_state_0' class="control-label">State <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <select class="form-control validate[required]" id="parent_state_0" name="parent_state_0">
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
                                         <option value="AZ">Arizona</option>
@@ -189,22 +189,22 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="parent_zip_0">Zip Code <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                                    <input type="text" class="form-control" id="parent_zip_0" name="parent_zip_0" placeholder="xxxxx" maxlength="5">
+                                    <label for="parent_zip_0" class="control-label">Zip Code <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="text" class="form-control validate[required, custom[zipCode]]" id="parent_zip_0" name="parent_zip_0" placeholder="xxxxx" maxlength="5">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="parent_mobile_0">Mobile Phone <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                                    <input type="tel" class="form-control" id="parent_mobile_0" name="parent_mobile_0" placeholder="(xxx) xxx-xxxx">
+                                    <label for="parent_mobile_0" class="control-label">Mobile Phone <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="tel" class="form-control validate[required, custom[phone]]" id="parent_mobile_0" name="parent_mobile_0" placeholder="(xxx) xxx-xxxx">
                                 </div>
                                 <div class="form-group">
-                                    <label for="parent_other_phone_0">Other Phone</label>
-                                    <input type="tel" class="form-control" id="parent_other_phone_0" name="parent_other_phone_0" placeholder="(xxx) xxx-xxxx">
+                                    <label for="parent_other_phone_0" class="control-label">Other Phone</label>
+                                    <input type="tel" class="form-control validate[optional, custom[phone]]" id="parent_other_phone_0" name="parent_other_phone_0" placeholder="(xxx) xxx-xxxx">
                                 </div>
                                 <div class="form-group">
-                                    <label for="parent_email_0">Email Address</label>
-                                    <input type="email" class="form-control" id="parent_email_0" name="parent_email_0" placeholder="yourname@example.com">
+                                    <label for="parent_email_0" class="control-label">Email Address</label>
+                                    <input type="email" class="form-control validate[required, custom[email]]" id="parent_email_0" name="parent_email_0" placeholder="yourname@example.com">
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -251,10 +251,10 @@
                                     <input type="number" class="form-control" id="income_members_0" name="income_members_0" placeholder="0" maxlength="2">
                                 </div>
                                 <div class="form-group">
-                                    <label for="income_monthly_0">Monthly income of household from all sources</label>
+                                    <label for="income_monthly_0" class="control-label">Monthly income of household from all sources</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">$</span>
-                                        <input type="number" class="form-control" id="income_monthly_0" name="income_monthly_0" placeholder="">
+                                        <input type="number" class="form-control validate[optional, custom[dollarAmount]]" id="income_monthly_0" name="income_monthly_0" placeholder="">
                                     </div>
                                 </div>
                                 <p class="mn_popover" id="income_disclaimer" data-container="body" data-toggle="popover" data-placement="top" data-content="Household income should include earnings from work (before deductions), child support or alimony, payments received from pensions, retirement, and social security, or any other income for all household members.  Please include total yearly income for all household sources, and total number of household members.">What should I include?</p>

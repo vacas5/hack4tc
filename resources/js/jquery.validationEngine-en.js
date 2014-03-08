@@ -17,6 +17,14 @@
                     },
                     "alertText": "* Field must equal test"
                 },
+		"dollarAmount": {
+		    "regex": /^[0-9]+(\.[0-9][0-9])?$/,
+		    "alertText": "* Invalid Dollar Amount"
+		},
+		"zipCode": {
+		    "regex": /^\d{5}$/,
+		    "alertText": "* Invalid Zip Code"
+		},
                 "dateRange": {
                     "regex": "none",
                     "alertText": "* Invalid ",
@@ -96,6 +104,10 @@
                     "regex": /^[\-\+]?((([0-9]{1,3})([,][0-9]{3})*)|([0-9]+))?([\.]([0-9]+))?$/,
                     "alertText": "* Invalid floating decimal number"
                 },
+		"ssn": {
+		  "regex": /^\d{3}-?\d{2}-?\d{4}$/,
+		  "alertText": "* Invalid Social Security Number"
+		},
                 "date": {
                     //	Check if date is valid by leap year
 			"func": function (field) {
@@ -111,7 +123,7 @@
 
 					return (date.getFullYear() == year && date.getMonth() == (month - 1) && date.getDate() == day);
 				},
-			 "alertText": "* Invalid date, must be in YYYY-MM-DD format"
+			 "alertText": "* Invalid date, must be in MM/DD/YYYY format"
                 },
                 "ipv4": {
                     "regex": /^((([01]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))[.]){3}(([0-1]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))$/,
