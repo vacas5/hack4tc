@@ -6,9 +6,17 @@ $('#income_monthly_0').change(function() {
     $('#income_annual_0').val(value);
 });
 
-$('#begin_form, #tab_next, #tab_previous').click(function(e) {
+$('#begin_form').click(function(e){
+    e.preventDefault();
+    navButtons(e);
+})
+$('#tab_next, #tab_previous').click(function(e) {
 	e.preventDefault();
-	navButtons(e);
+	$('#validate').validate();
+	if ($('#validate').validate()) {
+	    navButtons(e);
+	}
+	$('.mn_popover').popover('hide');
 });
 
 $('body').on('shown.bs.tab', function(e) {

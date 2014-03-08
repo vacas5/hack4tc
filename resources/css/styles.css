@@ -24,6 +24,14 @@ a:hover {
     background-color:#002c73;
     border-color:#002c73;
 }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    background-color:#002c73;
+    border-color:#002c73;
+}
+.btnAdd {
+    background-color:#bbbdc0;
+    margin-bottom:5px;
+}
 .mn_wrapper {
     padding:0 10px 15px;
     background-color: #fff;
@@ -57,10 +65,23 @@ a:hover {
 .next_prev {
     text-align: center;
 }
+.getting_started li {
+    display:table;
+    width:100%;
+    padding:2px 0;
+}
+.getting_started li i, .getting_started li span {
+    display:table-cell;
+    vertical-align: middle;
+}
+.getting_started li i {
+    width:15%;
+}
 footer {
     color: #fff;
     padding: 10px;
     overflow: hidden;
+    text-align:center;
 }
 @media only screen and (min-width: 400px) {
     .mn_wrapper {
