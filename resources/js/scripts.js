@@ -78,14 +78,14 @@ function deleteFields(cStructures, addElement, deleteElement) {
 function nextPrev() {
     //code
     var $tabPanes = $('.tab-pane');
-    var $tabNavs = $('.nav-tabs li')
+    var $tabNavs = $('.nav-pills li')
     $('body').on('click', '#tab-previous', function(e) {
         e.preventDefault();
         var $activeTab = $('.tab-pane.active');
         var $activeTabId = $activeTab.attr('id').slice(-1);
         var position = parseInt($activeTabId);
-        var $activeNavTab = $('.nav-tabs li.active')
-        console.log($activeTabId);
+        var $activeNavTab = $('.nav-pills li.active')
+        //console.log($activeTabId);
         if (position == 0) {
             $('#tab-previous').prop('disabled');
         }
@@ -95,13 +95,22 @@ function nextPrev() {
             $activeTab.removeClass('active');
             $($tabPanes[position - 1]).addClass('active');
         }
+	if ($('#step3').hasClass('active')) {
+            //console.log('it is active')
+            $('#tab-next').addClass('hidden');
+            $('.submit_button').removeClass('hidden');
+        }
+	else {
+	    $('#tab-next').removeClass('hidden');
+	    $('.submit_button').addClass('hidden');
+	}
     });
      $('body').on('click', '#tab-next', function(e) {
         e.preventDefault();
         var $activeTab = $('.tab-pane.active');
         var $activeTabId = $activeTab.attr('id').slice(-1);
         var position = parseInt($activeTabId);
-        var $activeNavTab = $('.nav-tabs li.active')
+        var $activeNavTab = $('.nav-pills li.active')
         console.log(position + 1, $tabNavs.length);
         if (position + 1 == $tabPanes.length) {
             $('#tab-next').prop('disabled');
@@ -113,10 +122,14 @@ function nextPrev() {
             $($tabPanes[position + 1]).addClass('active');
         }
         if ($('#step3').hasClass('active')) {
-            console.log('it is active')
+            //console.log('it is active')
             $('#tab-next').addClass('hidden');
             $('.submit_button').removeClass('hidden');
         }
+	else {
+	    $('#tab-next').removeClass('hidden');
+	    $('.submit_button').addClass('hidden');
+	}
     });
     console.log($('#step3').hasClass('active'));
 
@@ -124,7 +137,7 @@ function nextPrev() {
 
 $(function() {
      /* Validation */
-     $(".validate").validationEngine();
+     $("#validate").validationEngine();
     nextPrev();
     /* Add/Remove Fields Initialization */
     // Add the "onclick" event to the "Add" link

@@ -1640,9 +1640,9 @@
 			//    }
 			//}
 			//
-			//prompt.css({
-			//	"opacity": 0
-			//});
+			prompt.css({
+				"opacity": 1
+			});
 			//if(positionType === 'inline') {
 			//	prompt.addClass("inline");
 			//	if(typeof field.attr('data-prompt-target') !== 'undefined' && $('#'+field.attr('data-prompt-target')).length > 0) {
@@ -1690,10 +1690,12 @@
 
 			if (prompt) {
 				if (typeof type !== "undefined") {
-					if (type == "pass")
-						prompt.addClass("greenPopup");
-					else
-						prompt.removeClass("greenPopup");
+					if (type == "pass") {
+						prompt.removeClass('has-error').addClass("has-success");
+					}
+					else{
+						prompt.removeClass("has-sucess");
+					}
 
 					if (type == "load")
 						prompt.addClass("blackPopup");
@@ -1705,7 +1707,7 @@
 				else
 					prompt.removeClass("ajaxed");
 
-				prompt.find(".formErrorContent").html(promptText);
+				prompt.find(".help-block").html(promptText);
 
 				var pos = methods._calculatePosition(field, prompt, options);
 				var css = {"top": pos.callerTopPosition,
@@ -1725,12 +1727,18 @@
 		*            field
 		*/
 		 _closePrompt: function(field) {
-			 var prompt = methods._getPrompt(field);
-			 if (prompt)
-				 prompt.fadeTo("fast", 0, function() {
-					 prompt.parent('.formErrorOuter').remove();
-					 prompt.remove();
-				 });
+			console.log('close prompt');
+			var prompt = $(field).closest('.form-group');
+			if (prompt.hasClass('has-error')) {
+				prompt.removeClass('has-error').addClass('has-success');
+				prompt.find('.help-block').html('')
+			}
+			// var prompt = methods._getPrompt(field);
+			// if (prompt)
+			//	 prompt.fadeTo("fast", 0, function() {
+			//		 prompt.parent('.formErrorOuter').remove();
+			//		 prompt.remove();
+			//	 });
 		 },
 		 closePrompt: function(field) {
 			 return methods._closePrompt(field);
@@ -1745,7 +1753,7 @@
 		_getPrompt: function(field) {
 			var formId = $(field).closest('form, .validationEngineContainer').attr('id');
 			var className = methods._getClassName(field.attr("id")) + "formError";
-				var match = $("." + methods._escapeExpression(className) + '.parentForm' + methods._getClassName(formId))[0];
+			var match = $("." + methods._escapeExpression(className) + '.parentForm' + methods._getClassName(formId))[0];
 			if (match)
 			return $(match);
 		},
