@@ -1,4 +1,3 @@
-$('.mn_popover').popover();
 toggleForm();
 
 $('#income_monthly_0').change(function() {

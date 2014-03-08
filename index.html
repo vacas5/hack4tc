@@ -224,7 +224,7 @@
                                         <input type="checkbox" name="parent_text_optin_0" checked="checked" id="parent_text_optin_0"> Please send me important updates by text message.
                                     </label>
                                 </div>
-                                <p class="mn_popover" id="email_disclaimer" data-container="body" data-toggle="popover" data-placement="bottom" data-content="We respect your privacy and do not tolerate spam and will never sell, rent, lease or give away your information (name, address, email, etc.) to any third party. Nor will we send you unsolicited email. If you choose to provide your cell phone number and/or email address, then we will send you notifications relating to your child, classroom activities, or important notifications (i.e. weather closings). You will have the option to opt out of notifications at any time.">How will you use this information?</p>
+                                <p class="mn_popover" id="email_disclaimer" data-container="body" data-toggle="modal" data-target="#info_modal">How will you use this information?</p>
                             </div>
                         </div>
                     </fieldset>
@@ -266,7 +266,7 @@
                                         <input type="number" class="form-control validate[optional, custom[onlyNumberSp]]" id="income_monthly_0" name="income_monthly_0" placeholder="">
                                     </div>
                                 </div>
-                                <p class="mn_popover" id="income_disclaimer" data-container="body" data-toggle="popover" data-placement="top" data-content="Household income should include earnings from work (before deductions), child support or alimony, payments received from pensions, retirement, and social security, or any other income for all household members.  Please include total yearly income for all household sources, and total number of household members.">What should I include?</p>
+                                <p class="mn_popover" id="income_disclaimer" data-container="body" data-toggle="modal" data-placement="top" data-target="#include_modal">What should I include?</p>
                                 <div class="form-group hidden">
                                     <label for="income_annual_0">Annual income of household from all sources</label>
                                     <div class="input-group">
@@ -294,6 +294,48 @@
             <!-- end tab-content -->
         </form>
     </div> <!-- end wrapper -->
+    <div class="modal fade" id="info_modal">
+  <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">How will you use this information?</h4>
+          </div>
+          <div class="modal-body">
+            <p>We respect your privacy and do not tolerate spam and will never sell,
+            rent, lease or give away your information (name, address, email, etc.)
+            to any third party. Nor will we send you unsolicited email.
+            If you choose to provide your cell phone number and/or email address,
+            then we will send you notifications relating to your child,
+            classroom activities, or important notifications (i.e. weather closings).
+            You will have the option to opt out of notifications at any time.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="modal fade" id="include_modal">
+  <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">What should I include?</h4>
+          </div>
+          <div class="modal-body">
+            <p>Household income should include earnings from work (before deductions),
+            child support or alimony, payments received from pensions, retirement,
+            and social security, or any other income for all household members.
+            Please include total yearly income for all household sources,
+            and total number of household members.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     <footer>
         <p>&copy; 2014 McNeilly Center for Children</p>
     </footer>
