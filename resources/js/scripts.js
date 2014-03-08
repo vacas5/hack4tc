@@ -113,7 +113,7 @@ function manageButtons(step) {
 		case '#step0':
 			$('#tab_previous, #tab_next, #submit_form').addClass('hidden');
 			break;
-		case '#step3':
+		case '#step4':
 			$('#begin_form, #tab_next').addClass('hidden');
 			break;
 		default:

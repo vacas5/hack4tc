@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>Enrollment Form</title>
+    <title>Application Form</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Overlock:400,700' rel='stylesheet' type='text/css'>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +21,7 @@
                 <li><a href="#step1" data-toggle="pill"><i class="fa fa-user fa-3x"></i></a></li>
                 <li><a href="#step2" data-toggle="pill"><i class="fa fa-home fa-3x"></i></a></li>
                 <li><a href="#step3" data-toggle="pill"><i class="fa fa-money fa-3x"></i></a></li>
+                <li><a href="#step4" data-toggle="pill"><i class="fa fa-thumbs-o-up fa-3x"></i></a></li>
             </ul>
             <div class="tab-content">
                 <div class="step tab-pane active" id="step0">
@@ -274,12 +275,18 @@
                             </div>
                         </div>
                     </fieldset>
+                </div> <!-- end step -->
+                <div class="step tab-pane active" id="step4">
+                    <div>
+                        <h2>Ready to Submit?</h2>
+                        <p>Your application is complete! If you're ready to submit, click the button below. Otherwise, you can go back and change any of your information.</p>
+                    </div>
                 </div>
                 <div class="next_prev form-group clearfix">
                     <button type="button" class="btn btn-primary" id="begin_form">Begin Enrollment</button>
                     <button type="button" class="btn btn-default hidden pull-left" id="tab_previous">Previous Step</button>
                     <button type="button" class="btn btn-primary hidden pull-right" id="tab_next">Next Step</button>
-                    <button type="submit" class="btn btn-success hidden pull-right" id="submit_form">Submit</button>
+                    <button type="submit" class="btn btn-success hidden pull-right" id="submit_form">Submit Application</button>
                 </div>
             </div>
             <!-- end tab-content -->
