@@ -21,6 +21,19 @@ $('#tab_next, #tab_previous').click(function(e) {
     }
     $('.mn_popover').popover('hide');
 });
+$('[data-toggle="pill"]').click(function(e){
+    var validateInputs = $('fieldset').filter(':visible').find(':input');
+    $.each(validateInputs, function() {
+	$(this).validationEngine('validate');
+    });
+    if ($('#validate').filter(':visible').validationEngine('validate')) {
+	return true;
+    }
+    else {
+	return false;
+    }
+    $('.mn_popover').popover('hide');
+})
 
 $('body').on('shown.bs.tab', function(e) {
 	var step = $(e.target).attr('href');
