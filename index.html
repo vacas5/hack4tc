@@ -2,39 +2,46 @@
 
 <html>
 <head>
-    <title>Enrollment Form</title>
+    <title>Application Form</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Overlock:400,700' rel='stylesheet' type='text/css'>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="resources/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
+    <h1 class="mn_logo">
+        <img src="resources/images/logo.jpg" alt="McNeilly Center for Children">
+    </h1>
     <div class="mn_wrapper">
-        <h1 class="mn_logo">
-            <img src="resources/images/logo.jpg" alt="McNeilly Center for Children">
-        </h1>
         <form role="form" class="validate mn_form" id="validate" action="http://hftcmcfcs1.cloudapp.net/mcneilly/Test" method="GET">
-        <!--<div class="container mn_form">-->
             <ul class="nav nav-pills collapse in">
                 <li class="active"><a href="#step0" data-toggle="pill"><i class="fa fa-info-circle fa-3x"></i></a></li>
                 <li><a href="#step1" data-toggle="pill"><i class="fa fa-user fa-3x"></i></a></li>
                 <li><a href="#step2" data-toggle="pill"><i class="fa fa-home fa-3x"></i></a></li>
                 <li><a href="#step3" data-toggle="pill"><i class="fa fa-money fa-3x"></i></a></li>
+                <li><a href="#step4" data-toggle="pill"><i class="fa fa-thumbs-o-up fa-3x"></i></a></li>
             </ul>
             <div class="tab-content">
                 <div class="step tab-pane active" id="step0">
-                    <h2>Getting Started</h2>
-                    <p>Thank you for your interest in enrolling your child at McNeilly Center for Children!</p>
-                    <p>Please complete the following form to secure a spot on our waiting list, and you will be contacted if space for your child(ren) becomes available.</p>
-                    <p>Please have the following information available before you begin:</p>
-                    <ul class="list-unstyled well">
-                        <li><i class="fa fa-user fa-fw fa-2x"></i> Social security numbers for you and your children</li>
-                        <li><i class="fa fa-home fa-fw fa-2x"></i> Contact phone numbers and addresses</li>
-                        <li><i class="fa fa-credit-card fa-fw fa-2x"></i> Insurance information</li>
-                        <li><i class="fa fa-money fa-fw fa-2x"></i> Household income information</li>
-                        <li><i class="fa fa-info-circle fa-fw fa-2x"></i> Assistance case numbers (if applicable)</li>
-                    </ul>
+                    <h2 class="mn_heading">Getting Started with McNeilly Center</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Thank you for your interest in enrolling your child at McNeilly Center for Children!</p>
+                            <p>Please complete the following form to secure a spot on our waiting list, and you will be contacted if space for your child(ren) becomes available.</p>
+                            <p>Please have the following information available before you begin:</p>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled well">
+                                <li><i class="fa fa-user fa-fw fa-2x"></i> Social security numbers for you and your children</li>
+                                <li><i class="fa fa-home fa-fw fa-2x"></i> Contact phone numbers and addresses</li>
+                                <li><i class="fa fa-credit-card fa-fw fa-2x"></i> Insurance information</li>
+                                <li><i class="fa fa-money fa-fw fa-2x"></i> Household income information</li>
+                                <li><i class="fa fa-info-circle fa-fw fa-2x"></i> Assistance case numbers (if applicable)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div> <!-- end step -->
                 <div class="step tab-pane" id="step1">
                     <p class="text-right validation_sign"><i class="fa fa-exclamation-circle"></i> Required Field</p>
@@ -268,19 +275,26 @@
                             </div>
                         </div>
                     </fieldset>
+                </div> <!-- end step -->
+                <div class="step tab-pane active" id="step4">
+                    <div>
+                        <h2>Ready to Submit?</h2>
+                        <p>Your application is complete! If you're ready to submit, click the button below. Otherwise, you can go back and change any of your information.</p>
+                    </div>
                 </div>
-                <div class="nextPrev form-group">
-                    <a href="#" class="btn btn-primary" id="tab-previous" data-toggle="tab">Previous Step</a>
-                    <a href="#" class="btn btn-success pull-right" id="tab-next" data-toggle="tab">Next Step</a>
-                </div>
-                <div class="submit_button hidden">
-                    <button type="submit" class="btn btn-default">Submit</button>
+                <div class="next_prev form-group clearfix">
+                    <button type="button" class="btn btn-primary" id="begin_form">Begin Enrollment</button>
+                    <button type="button" class="btn btn-default hidden pull-left" id="tab_previous">Previous Step</button>
+                    <button type="button" class="btn btn-primary hidden pull-right" id="tab_next">Next Step</button>
+                    <button type="submit" class="btn btn-success hidden pull-right" id="submit_form">Submit Application</button>
                 </div>
             </div>
             <!-- end tab-content -->
-        <!--</div>--> <!-- end container -->
         </form>
-    </div>
+    </div> <!-- end wrapper -->
+    <footer>
+        <p class="pull-right">&copy; 2014 McNeilly Center for Children</p>
+    </footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="resources/js/formToWizard.js"></script>

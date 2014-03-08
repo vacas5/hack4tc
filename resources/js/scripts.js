@@ -6,6 +6,16 @@ $('#income_monthly_0').change(function() {
     $('#income_annual_0').val(value);
 });
 
+$('#begin_form, #tab_next, #tab_previous').click(function(e) {
+	e.preventDefault();
+	navButtons(e);
+});
+
+$('body').on('shown.bs.tab', function(e) {
+	var step = $(e.target).attr('href');
+	manageButtons(step);
+});
+
 function toggleForm() {
     $('input[data-toggle="form-collapse"]').each(function() {
         var self = this;
@@ -76,70 +86,47 @@ function deleteFields(cStructures, addElement, deleteElement) {
         $(deleteElement).prop('disabled', true);
     }
 }
-function nextPrev() {
-    //code
-    var $tabPanes = $('.tab-pane');
-    var $tabNavs = $('.nav-pills li')
-    $('body').on('click', '#tab-previous', function(e) {
-        e.preventDefault();
-        var $activeTab = $('.tab-pane.active');
-        var $activeTabId = $activeTab.attr('id').slice(-1);
-        var position = parseInt($activeTabId);
-        var $activeNavTab = $('.nav-pills li.active')
-        //console.log($activeTabId);
-        if (position == 0) {
-            $('#tab-previous').prop('disabled');
-        }
-        else {
-            $activeNavTab.removeClass('active');
-            $($tabNavs[position - 1]).addClass('active');
-            $activeTab.removeClass('active');
-            $($tabPanes[position - 1]).addClass('active');
-        }
-	if ($('#step3').hasClass('active')) {
-            //console.log('it is active')
-            $('#tab-next').addClass('hidden');
-            $('.submit_button').removeClass('hidden');
-        }
-	else {
-	    $('#tab-next').removeClass('hidden');
-	    $('.submit_button').addClass('hidden');
-	}
-    });
-     $('body').on('click', '#tab-next', function(e) {
-        e.preventDefault();
-        var $activeTab = $('.tab-pane.active');
-        var $activeTabId = $activeTab.attr('id').slice(-1);
-        var position = parseInt($activeTabId);
-        var $activeNavTab = $('.nav-pills li.active')
-        console.log(position + 1, $tabNavs.length);
-        if (position + 1 == $tabPanes.length) {
-            $('#tab-next').prop('disabled');
-        }
-        else {
-            $activeNavTab.removeClass('active');
-            $($tabNavs[position + 1]).addClass('active');
-            $activeTab.removeClass('active');
-            $($tabPanes[position + 1]).addClass('active');
-        }
-        if ($('#step3').hasClass('active')) {
-            //console.log('it is active')
-            $('#tab-next').addClass('hidden');
-            $('.submit_button').removeClass('hidden');
-        }
-	else {
-	    $('#tab-next').removeClass('hidden');
-	    $('.submit_button').addClass('hidden');
-	}
-    });
-    console.log($('#step3').hasClass('active'));
 
+function navButtons(e) {
+	var button = $(e.currentTarget).attr('id');
+	var $activeTab = $('.tab-pane.active');
+	var $activeTabId = $activeTab.attr('id').slice(-1);
+	var position = parseInt($activeTabId);
+	var newStep;
+
+	if (button === 'tab_previous') {
+		newStep = '#step' + (position - 1);
+	} else {
+		newStep = '#step' + (position + 1);
+	}
+
+	$('.tab-pane, .nav-pills li').removeClass('active');
+	$(newStep).addClass('active');
+	$('.nav-pills a[href="' + newStep + '"]').parent('li').addClass('active');
+
+	manageButtons(newStep);
+}
+
+function manageButtons(step) {
+	$('.next_prev .btn').removeClass('hidden');
+	$(window).scrollTop(0);
+	switch (step) {
+		case '#step0':
+			$('#tab_previous, #tab_next, #submit_form').addClass('hidden');
+			break;
+		case '#step4':
+			$('#begin_form, #tab_next').addClass('hidden');
+			break;
+		default:
+			$('#begin_form, #submit_form').addClass('hidden');
+			break;
+
+	}
 }
 
 $(function() {
      /* Validation */
      $("#validate").validationEngine();
-    nextPrev();
     /* Add/Remove Fields Initialization */
     // Add the "onclick" event to the "Add" link
     $('.btnAdd').click(function(e) {
