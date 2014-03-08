@@ -1,11 +1,39 @@
-.mn_form {
+html {
+    height: 100%;
+    background: #ededed;
+}
+body {
+    min-height: 100%;
     max-width: 500px;
+    background-color: #fff;
     margin: 0 auto;
     padding: 0 10px;
+    overflow: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+.mn_wrapper {
+}
+.mn_logo {
+    margin: 0 -10px 10px;
+    padding: 0;
+    text-align: center;
+    background: #153761;
+}
+.mn_form {
+
 }
 .validation_sign {
     color: #F0AD4E;
 }
 .mn_popover {
     color: blue;
+    cursor: pointer;
+}
+@media only screen and (min-width: 400px) {
+    body {
+        padding: 0 20px;
+    }
+    .mn_logo {
+        margin: 0 -20px 10px;
+    }
 }

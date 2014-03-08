@@ -1,4 +1,4 @@
-$('#email_disclaimer').popover();
+$('.mn_popover').popover();
 toggleForm();
 
 $('#income_monthly_0').change(function() {
@@ -29,9 +29,9 @@ function toggleForm() {
 }
 
 /*----------- 07. ADD/REMOVE FIELDS ----------------- */
-function addFields(clonedStructures, maxStructures, addElement, deleteElement) {
+function addFields(cStructures, maxStructures, addElement, deleteElement) {
     // Variables
-    var clonedStructures = $(clonedStructures);
+    var clonedStructures = $(cStructures);
     var index = clonedStructures.length + 1;
     var lastClonedStructure = clonedStructures.last();
     // Logic
@@ -61,9 +61,9 @@ function addFields(clonedStructures, maxStructures, addElement, deleteElement) {
         $(addElement).prop('disabled', true);
     }
 }
-function deleteFields(clonedStructures, addElement, deleteElement) {
+function deleteFields(cStructures, addElement, deleteElement) {
     // Variables
-    var clonedStructures = $(clonedStructures);
+    var clonedStructures = $(cStructures);
     var lastClonedStructure = clonedStructures.last();
     // If there are 2 or more fieldsets, remove the last fieldset
     if (clonedStructures.length >= 2) {
