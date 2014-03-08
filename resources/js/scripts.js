@@ -11,12 +11,15 @@ $('#begin_form').click(function(e){
     navButtons(e);
 })
 $('#tab_next, #tab_previous').click(function(e) {
-	e.preventDefault();
-	$('#validate').validate();
-	if ($('#validate').validate()) {
-	    navButtons(e);
-	}
-	$('.mn_popover').popover('hide');
+    e.preventDefault();
+    var validateInputs = $('fieldset').filter(':visible').find(':input');
+    $.each(validateInputs, function() {
+	$(this).validationEngine('validate');
+    });
+    if ($('#validate').filter(':visible').validationEngine('validate')) {
+	navButtons(e);
+    }
+    $('.mn_popover').popover('hide');
 });
 
 $('body').on('shown.bs.tab', function(e) {

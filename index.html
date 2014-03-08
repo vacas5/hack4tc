@@ -12,7 +12,7 @@
 
 <body>
     <h1 class="mn_logo">
-        <img src="resources/images/logo.jpg" alt="McNeilly Center for Children">
+        <img src="resources/images/McNeilly_Horz_White.png" alt="McNeilly Center for Children">
     </h1>
     <div class="mn_wrapper">
         <form role="form" class="validate mn_form" id="validate" action="/Test" method="POST">
@@ -46,7 +46,7 @@
                 <div class="step tab-pane" id="step1">
                     <p class="text-right validation_sign"><i class="fa fa-exclamation-circle"></i> Required Field</p>
                     <fieldset>
-                        <legend>Child's Information</legend>
+                        <h2 class="mn_heading">Child's Information</h2>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -99,7 +99,7 @@
                 <div class="step tab-pane" id="step2">
                     <p class="text-right validation_sign"><i class="fa fa-exclamation-circle"></i> Required Field</p>
                     <fieldset>
-                        <legend>Parent/Guardian Information</legend>
+                        <h2 class="mn_heading">Parent/Guardian Information</h2>
                         <p class="help-block">This person will serve as the primary contact.</p>
                         <div class="row">
                             <div class="col-md-6">
@@ -237,19 +237,19 @@
                 <div class="step tab-pane" id="step3">
                     <p class="text-right validation_sign"><i class="fa fa-exclamation-circle"></i> Required Field</p>
                     <fieldset>
-                        <legend>Income Eligibility</legend>
+                        <h2 class="mn_heading">Income Eligibility</h2>
                         <div class="row">
-                            <div class="col-md-6">
-                                <label><i class="fa fa-exclamation-circle validation_sign"></i> Is anyone from your household receiving benefits from Family First? </label>
+                            <div class="col-md-6 form-group">
+                                <label class="control-label"><i class="fa fa-exclamation-circle validation_sign"></i> Is anyone from your household receiving benefits from Family First? </label>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="income_family_first_0" value="yes">
+                                        <input type="radio" name="income_family_first_0" value="yes" class="validate[required]">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="income_family_first_0" value="no" data-toggle="form-collapse" data-target="#family_first_no">
+                                        <input type="radio" name="income_family_first_0" value="no" data-toggle="form-collapse" data-target="#family_first_no" class="validate[required]">
                                         No
                                     </label>
                                 </div>
@@ -263,7 +263,7 @@
                                     <label for="income_monthly_0" class="control-label">Monthly income of household from all sources</label>
                                     <div class="input-group">
                                         <span class="input-group-addon">$</span>
-                                        <input type="number" class="form-control validate[optional, custom[dollarAmount]]" id="income_monthly_0" name="income_monthly_0" placeholder="">
+                                        <input type="number" class="form-control validate[optional, custom[onlyNumberSp]]" id="income_monthly_0" name="income_monthly_0" placeholder="">
                                     </div>
                                 </div>
                                 <p class="mn_popover" id="income_disclaimer" data-container="body" data-toggle="popover" data-placement="top" data-content="Household income should include earnings from work (before deductions), child support or alimony, payments received from pensions, retirement, and social security, or any other income for all household members.  Please include total yearly income for all household sources, and total number of household members.">What should I include?</p>
@@ -278,7 +278,7 @@
                         </div>
                     </fieldset>
                 </div> <!-- end step -->
-                <div class="step tab-pane active" id="step4">
+                <div class="step tab-pane" id="step4">
                     <div>
                         <h2>Ready to Submit?</h2>
                         <p>Your application is complete! If you're ready to submit, click the button below. Otherwise, you can go back and change any of your information.</p>
