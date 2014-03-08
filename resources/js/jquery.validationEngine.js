@@ -1562,10 +1562,11 @@
 			var prompt = $(field).closest('.form-group');
 
 			if (prompt.hasClass('has-error')) {
-
+				var promptContent = $('<span>').addClass("help-block").html(promptText);
 			}
 			else{
 				prompt.addClass('has-error');
+				var promptContent = $('<span>').addClass("help-block").html(promptText).appendTo(prompt);
 			}
 
 			//// create the prompt
@@ -1590,7 +1591,7 @@
 			//	prompt.addClass("ajaxed");
 			//
 			//// create the prompt content
-			var promptContent = $('<span>').addClass("help-block").html(promptText).appendTo(prompt);
+
 			//
 			//// determine position type
 			//var positionType=field.data("promptPosition") || options.promptPosition;
