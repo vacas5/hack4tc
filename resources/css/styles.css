@@ -11,6 +11,9 @@ body {
     overflow: auto;
     font-family: 'Open Sans', sans-serif;
 }
+h1, h2, h3, h4, h5, h6, legend {
+    font-family: 'Overlock', cursive;
+}
 .mn_wrapper {
     padding-bottom: 15px;
 }
@@ -26,6 +29,9 @@ body {
 .mn_popover {
     color: blue;
     cursor: pointer;
+}
+.next_prev {
+    text-align: center;
 }
 @media only screen and (min-width: 400px) {
     body {
