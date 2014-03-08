@@ -87,6 +87,12 @@ a:hover {
 .getting_started li i {
     width:15%;
 }
+.jumbotron {
+    background:#fff;
+}
+.jumbotron h2 {
+    color:#002c73
+}
 footer {
     color: #fff;
     padding: 10px;
