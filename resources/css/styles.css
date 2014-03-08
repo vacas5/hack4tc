@@ -23,6 +23,12 @@ h1, h2, h3, h4, h5, h6, legend {
     text-align: center;
     background: #153761;
 }
+.mn_heading {
+    margin-bottom: 25px;
+}
+.nav-pills {
+    margin-bottom: 15px;
+}
 .validation_sign {
     color: #F0AD4E;
 }

@@ -16,7 +16,6 @@
             <img src="resources/images/logo.jpg" alt="McNeilly Center for Children">
         </h1>
         <form role="form" class="validate mn_form" id="validate" action="http://hftcmcfcs1.cloudapp.net/mcneilly/Test" method="GET">
-        <!--<div class="container mn_form">-->
             <ul class="nav nav-pills collapse in">
                 <li class="active"><a href="#step0" data-toggle="pill"><i class="fa fa-info-circle fa-3x"></i></a></li>
                 <li><a href="#step1" data-toggle="pill"><i class="fa fa-user fa-3x"></i></a></li>
@@ -25,17 +24,23 @@
             </ul>
             <div class="tab-content">
                 <div class="step tab-pane active" id="step0">
-                    <h2>Getting Started</h2>
-                    <p>Thank you for your interest in enrolling your child at McNeilly Center for Children!</p>
-                    <p>Please complete the following form to secure a spot on our waiting list, and you will be contacted if space for your child(ren) becomes available.</p>
-                    <p>Please have the following information available before you begin:</p>
-                    <ul class="list-unstyled well">
-                        <li><i class="fa fa-user fa-fw fa-2x"></i> Social security numbers for you and your children</li>
-                        <li><i class="fa fa-home fa-fw fa-2x"></i> Contact phone numbers and addresses</li>
-                        <li><i class="fa fa-credit-card fa-fw fa-2x"></i> Insurance information</li>
-                        <li><i class="fa fa-money fa-fw fa-2x"></i> Household income information</li>
-                        <li><i class="fa fa-info-circle fa-fw fa-2x"></i> Assistance case numbers (if applicable)</li>
-                    </ul>
+                    <h2 class="mn_heading">Getting Started with McNeilly Center</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Thank you for your interest in enrolling your child at McNeilly Center for Children!</p>
+                            <p>Please complete the following form to secure a spot on our waiting list, and you will be contacted if space for your child(ren) becomes available.</p>
+                            <p>Please have the following information available before you begin:</p>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled well">
+                                <li><i class="fa fa-user fa-fw fa-2x"></i> Social security numbers for you and your children</li>
+                                <li><i class="fa fa-home fa-fw fa-2x"></i> Contact phone numbers and addresses</li>
+                                <li><i class="fa fa-credit-card fa-fw fa-2x"></i> Insurance information</li>
+                                <li><i class="fa fa-money fa-fw fa-2x"></i> Household income information</li>
+                                <li><i class="fa fa-info-circle fa-fw fa-2x"></i> Assistance case numbers (if applicable)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div> <!-- end step -->
                 <div class="step tab-pane" id="step1">
                     <p class="text-right validation_sign"><i class="fa fa-exclamation-circle"></i> Required Field</p>
@@ -270,7 +275,7 @@
                         </div>
                     </fieldset>
                 </div>
-                <div class="next_prev form-group">
+                <div class="next_prev form-group clearfix">
                     <button type="button" class="btn btn-primary" id="begin_form">Begin Enrollment</button>
                     <button type="button" class="btn btn-default hidden pull-left" id="tab_previous">Previous Step</button>
                     <button type="button" class="btn btn-primary hidden pull-right" id="tab_next">Next Step</button>
@@ -278,7 +283,6 @@
                 </div>
             </div>
             <!-- end tab-content -->
-        <!--</div>--> <!-- end container -->
         </form>
     </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

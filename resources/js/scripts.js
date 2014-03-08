@@ -108,6 +108,7 @@ function navButtons(e) {
 
 function manageButtons(step) {
 	$('.next_prev .btn').removeClass('hidden');
+	$(window).scrollTop(0);
 	switch (step) {
 		case '#step0':
 			$('#tab_previous, #tab_next, #submit_form').addClass('hidden');
