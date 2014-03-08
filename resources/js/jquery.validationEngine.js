@@ -1558,17 +1558,26 @@
 		* @param {Map} options user options
 		*/
 		_buildPrompt: function(field, promptText, type, ajaxed, options) {
+			console.log($(field).closest('.form-group'));
+			var prompt = $(field).closest('.form-group');
 
-			// create the prompt
-			var prompt = $('<div>');
-			prompt.addClass(methods._getClassName(field.attr("id")) + "formError");
-			// add a class name to identify the parent form of the prompt
-			prompt.addClass("parentForm"+methods._getClassName(field.closest('form, .validationEngineContainer').attr("id")));
-			prompt.addClass("formError");
+			if (prompt.hasClass('has-error')) {
 
+			}
+			else{
+				prompt.addClass('has-error');
+			}
+
+			//// create the prompt
+			//var prompt = $('<div>');
+			//prompt.addClass(methods._getClassName(field.attr("id")) + "formError");
+			//// add a class name to identify the parent form of the prompt
+			//prompt.addClass("parentForm"+methods._getClassName(field.closest('form, .validationEngineContainer').attr("id")));
+			//prompt.addClass("formError");
+			//
 			switch (type) {
 				case "pass":
-					prompt.addClass("greenPopup");
+					prompt.removeClass('has-error').addClass("has-success");
 					break;
 				case "load":
 					prompt.addClass("blackPopup");
@@ -1577,94 +1586,94 @@
 					/* it has error  */
 					//alert("unknown popup type:"+type);
 			}
-			if (ajaxed)
-				prompt.addClass("ajaxed");
-
-			// create the prompt content
-			var promptContent = $('<div>').addClass("formErrorContent").html(promptText).appendTo(prompt);
-
-			// determine position type
-			var positionType=field.data("promptPosition") || options.promptPosition;
-
-			// create the css arrow pointing at the field
-			// note that there is no triangle on max-checkbox and radio
-			if (options.showArrow) {
-				var arrow = $('<div>').addClass("formErrorArrow");
-
-				//prompt positioning adjustment support. Usage: positionType:Xshift,Yshift (for ex.: bottomLeft:+20 or bottomLeft:-20,+10)
-				if (typeof(positionType)=='string')
-				{
-					var pos=positionType.indexOf(":");
-					if(pos!=-1)
-						positionType=positionType.substring(0,pos);
-				}
-
-				switch (positionType) {
-					case "bottomLeft":
-					case "bottomRight":
-						prompt.find(".formErrorContent").before(arrow);
-						arrow.addClass("formErrorArrowBottom").html('<div class="line1"><!-- --></div><div class="line2"><!-- --></div><div class="line3"><!-- --></div><div class="line4"><!-- --></div><div class="line5"><!-- --></div><div class="line6"><!-- --></div><div class="line7"><!-- --></div><div class="line8"><!-- --></div><div class="line9"><!-- --></div><div class="line10"><!-- --></div>');
-						break;
-					case "topLeft":
-					case "topRight":
-						arrow.html('<div class="line10"><!-- --></div><div class="line9"><!-- --></div><div class="line8"><!-- --></div><div class="line7"><!-- --></div><div class="line6"><!-- --></div><div class="line5"><!-- --></div><div class="line4"><!-- --></div><div class="line3"><!-- --></div><div class="line2"><!-- --></div><div class="line1"><!-- --></div>');
-						prompt.append(arrow);
-						break;
-				}
-			}
-			// Add custom prompt class
-			if (options.addPromptClass)
-				prompt.addClass(options.addPromptClass);
-
-            // Add custom prompt class defined in element
-            var requiredOverride = field.attr('data-required-class');
-            if(requiredOverride !== undefined) {
-                prompt.addClass(requiredOverride);
-            } else {
-                if(options.prettySelect) {
-                    if($('#' + field.attr('id')).next().is('select')) {
-                        var prettyOverrideClass = $('#' + field.attr('id').substr(options.usePrefix.length).substring(options.useSuffix.length)).attr('data-required-class');
-                        if(prettyOverrideClass !== undefined) {
-                            prompt.addClass(prettyOverrideClass);
-                        }
-                    }
-                }
-            }
-
-			prompt.css({
-				"opacity": 0
-			});
-			if(positionType === 'inline') {
-				prompt.addClass("inline");
-				if(typeof field.attr('data-prompt-target') !== 'undefined' && $('#'+field.attr('data-prompt-target')).length > 0) {
-					prompt.appendTo($('#'+field.attr('data-prompt-target')));
-				} else {
-					field.after(prompt);
-				}
-			} else {
-				field.before(prompt);
-			}
-
-			var pos = methods._calculatePosition(field, prompt, options);
-			prompt.css({
-				'position': positionType === 'inline' ? 'relative' : 'absolute',
-				"top": pos.callerTopPosition,
-				"left": pos.callerleftPosition,
-				"marginTop": pos.marginTopSize,
-				"opacity": 0
-			}).data("callerField", field);
-
-
-			if (options.autoHidePrompt) {
-				setTimeout(function(){
-					prompt.animate({
-						"opacity": 0
-					},function(){
-						prompt.closest('.formErrorOuter').remove();
-						prompt.remove();
-					});
-				}, options.autoHideDelay);
-			}
+			//if (ajaxed)
+			//	prompt.addClass("ajaxed");
+			//
+			//// create the prompt content
+			var promptContent = $('<span>').addClass("help-block").html(promptText).appendTo(prompt);
+			//
+			//// determine position type
+			//var positionType=field.data("promptPosition") || options.promptPosition;
+			//
+			//// create the css arrow pointing at the field
+			//// note that there is no triangle on max-checkbox and radio
+			//if (options.showArrow) {
+			//	var arrow = $('<div>').addClass("formErrorArrow");
+			//
+			//	//prompt positioning adjustment support. Usage: positionType:Xshift,Yshift (for ex.: bottomLeft:+20 or bottomLeft:-20,+10)
+			//	if (typeof(positionType)=='string')
+			//	{
+			//		var pos=positionType.indexOf(":");
+			//		if(pos!=-1)
+			//			positionType=positionType.substring(0,pos);
+			//	}
+			//
+			//	switch (positionType) {
+			//		case "bottomLeft":
+			//		case "bottomRight":
+			//			prompt.find(".formErrorContent").before(arrow);
+			//			arrow.addClass("formErrorArrowBottom").html('<div class="line1"><!-- --></div><div class="line2"><!-- --></div><div class="line3"><!-- --></div><div class="line4"><!-- --></div><div class="line5"><!-- --></div><div class="line6"><!-- --></div><div class="line7"><!-- --></div><div class="line8"><!-- --></div><div class="line9"><!-- --></div><div class="line10"><!-- --></div>');
+			//			break;
+			//		case "topLeft":
+			//		case "topRight":
+			//			arrow.html('<div class="line10"><!-- --></div><div class="line9"><!-- --></div><div class="line8"><!-- --></div><div class="line7"><!-- --></div><div class="line6"><!-- --></div><div class="line5"><!-- --></div><div class="line4"><!-- --></div><div class="line3"><!-- --></div><div class="line2"><!-- --></div><div class="line1"><!-- --></div>');
+			//			prompt.append(arrow);
+			//			break;
+			//	}
+			//}
+			//// Add custom prompt class
+			//if (options.addPromptClass)
+			//	prompt.addClass(options.addPromptClass);
+			//
+			//// Add custom prompt class defined in element
+			//var requiredOverride = field.attr('data-required-class');
+			//if(requiredOverride !== undefined) {
+			//    prompt.addClass(requiredOverride);
+			//} else {
+			//    if(options.prettySelect) {
+			//	if($('#' + field.attr('id')).next().is('select')) {
+			//	    var prettyOverrideClass = $('#' + field.attr('id').substr(options.usePrefix.length).substring(options.useSuffix.length)).attr('data-required-class');
+			//	    if(prettyOverrideClass !== undefined) {
+			//		prompt.addClass(prettyOverrideClass);
+			//	    }
+			//	}
+			//    }
+			//}
+			//
+			//prompt.css({
+			//	"opacity": 0
+			//});
+			//if(positionType === 'inline') {
+			//	prompt.addClass("inline");
+			//	if(typeof field.attr('data-prompt-target') !== 'undefined' && $('#'+field.attr('data-prompt-target')).length > 0) {
+			//		prompt.appendTo($('#'+field.attr('data-prompt-target')));
+			//	} else {
+			//		field.after(prompt);
+			//	}
+			//} else {
+			//	field.before(prompt);
+			//}
+			//
+			//var pos = methods._calculatePosition(field, prompt, options);
+			//prompt.css({
+			//	'position': positionType === 'inline' ? 'relative' : 'absolute',
+			//	"top": pos.callerTopPosition,
+			//	"left": pos.callerleftPosition,
+			//	"marginTop": pos.marginTopSize,
+			//	"opacity": 0
+			//}).data("callerField", field);
+			//
+			//
+			//if (options.autoHidePrompt) {
+			//	setTimeout(function(){
+			//		prompt.animate({
+			//			"opacity": 0
+			//		},function(){
+			//			prompt.closest('.formErrorOuter').remove();
+			//			prompt.remove();
+			//		});
+			//	}, options.autoHideDelay);
+			//}
 			return prompt.animate({
 				"opacity": 0.87
 			});
@@ -1734,7 +1743,7 @@
 		* @return undefined or the error prompt (jqObject)
 		*/
 		_getPrompt: function(field) {
-				var formId = $(field).closest('form, .validationEngineContainer').attr('id');
+			var formId = $(field).closest('form, .validationEngineContainer').attr('id');
 			var className = methods._getClassName(field.attr("id")) + "formError";
 				var match = $("." + methods._escapeExpression(className) + '.parentForm' + methods._getClassName(formId))[0];
 			if (match)
@@ -2004,8 +2013,8 @@
 		focusFirstField:true,
 		// Show prompts, set to false to disable prompts
 		showPrompts: true,
-       // Should we attempt to validate non-visible input fields contained in the form? (Useful in cases of tabbed containers, e.g. jQuery-UI tabs)
-       validateNonVisibleFields: false,
+		// Should we attempt to validate non-visible input fields contained in the form? (Useful in cases of tabbed containers, e.g. jQuery-UI tabs)
+		validateNonVisibleFields: false,
 		// Opening box position, possible locations are: topLeft,
 		// topRight, bottomLeft, centerRight, bottomRight, inline
 		// inline gets inserted after the validated field or into an element specified in data-prompt-target
@@ -2077,4 +2086,3 @@
 	}};
 	$(function(){$.validationEngine.defaults.promptPosition = methods.isRTL()?'topLeft':"topRight"});
 })(jQuery);
-
