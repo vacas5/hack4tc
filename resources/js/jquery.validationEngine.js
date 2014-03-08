@@ -1565,7 +1565,7 @@
 				var promptContent = $('<span>').addClass("help-block").html(promptText);
 			}
 			else{
-				prompt.addClass('has-error');
+				prompt.removeClass('has-success').addClass('has-error');
 				var promptContent = $('<span>').addClass("help-block").html(promptText).appendTo(prompt);
 			}
 
