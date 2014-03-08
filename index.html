@@ -94,131 +94,133 @@
                         <legend>Parent/Guardian Information</legend>
                         <p class="help-block">This person will serve as the primary contact.</p>
                         <div class="row">
-                            <div class="col-md-6">.col-md-6</div>
-                            <div class="col-md-6">.col-md-6</div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for='parent_relationship_0'>Relationship <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <select class="form-control" id="parent_relationship_0" name="parent_relationship_0">
+                                        <option>Please Select</option>
+                                        <option value="mother">Mother</option>
+                                        <option value="father">Father</option>
+                                        <option value="guardian">Guardian</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for='parent_marital_status_0'>Marital Status <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <select class="form-control" id="parent_marital_status_0" name="parent_marital_status_0">
+                                        <option>Please Select</option>
+                                        <option value="married">Married</option>
+                                        <option value="single">Single</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="parent_first_name_0">First Name <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="text" class="form-control" id="parent_first_name_0" name="parent_first_name_0" placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="parent_last_name_0">Last Name <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="text" class="form-control" id="parent_last_name_0" name="parent_last_name_0" placeholder="Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="parent_address_0">Address <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="text" class="form-control" id="parent_address_0" name="parent_address_0" placeholder="123 Main St">
+                                </div>
+                                <div class="form-group">
+                                    <label for="parent_addressTwo_0">Address Line 2</label>
+                                    <input type="text" class="form-control" id="parent_addressTwo_0" name="parent_addressTwo_0" placeholder="Apt #">
+                                </div>
+                                <div class="form-group">
+                                    <label for="parent_city_0">City <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="text" class="form-control" id="parent_city_0" name="parent_city_0" placeholder="Nashville">
+                                </div>
+                                <div class="form-group">
+                                    <label for='parent_state_0'>State <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <select class="form-control" id="parent_state_0" name="parent_state_0">
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District Of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN" selected="selected">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="parent_zip_0">Zip Code <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="text" class="form-control" id="parent_zip_0" name="parent_zip_0" placeholder="xxxxx" maxlength="5">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="parent_mobile_0">Mobile Phone <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                    <input type="tel" class="form-control" id="parent_mobile_0" name="parent_mobile_0" placeholder="(xxx) xxx-xxxx">
+                                </div>
+                                <div class="form-group">
+                                    <label for="parent_other_phone_0">Other Phone</label>
+                                    <input type="tel" class="form-control" id="parent_other_phone_0" name="parent_other_phone_0" placeholder="(xxx) xxx-xxxx">
+                                </div>
+                                <div class="form-group">
+                                    <label for="parent_email_0">Email Address</label>
+                                    <input type="email" class="form-control" id="parent_email_0" name="parent_email_0" placeholder="yourname@example.com">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="parent_email_optin_0" checked="checked"> Please send me important updates by email.
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="parent_email_optin_0" checked="checked"> Please send me important updates by text message.
+                                    </label>
+                                </div>
+                                <p class="mn_popover" id="email_disclaimer" data-container="body" data-toggle="popover" data-placement="top" data-content="We respect your privacy and do not tolerate spam and will never sell, rent, lease or give away your information (name, address, email, etc.) to any third party. Nor will we send you unsolicited email. If you choose to provide your cell phone number and/or email address, then we will send you notifications relating to your child, classroom activities, or important notifications (i.e. weather closings). You will have the option to opt out of notifications at any time.">How will you use this information?</p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for='parent_relationship_0'>Relationship <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                            <select class="form-control" id="parent_relationship_0" name="parent_relationship_0">
-                                <option>Please Select</option>
-                                <option value="mother">Mother</option>
-                                <option value="father">Father</option>
-                                <option value="guardian">Guardian</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for='parent_marital_status_0'>Marital Status <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                            <select class="form-control" id="parent_marital_status_0" name="parent_marital_status_0">
-                                <option>Please Select</option>
-                                <option value="married">Married</option>
-                                <option value="single">Single</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="parent_first_name_0">First Name <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                            <input type="text" class="form-control" id="parent_first_name_0" name="parent_first_name_0" placeholder="John">
-                        </div>
-                        <div class="form-group">
-                            <label for="parent_last_name_0">Last Name <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                            <input type="text" class="form-control" id="parent_last_name_0" name="parent_last_name_0" placeholder="Doe">
-                        </div>
-                        <div class="form-group">
-                            <label for="parent_address_0">Address <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                            <input type="text" class="form-control" id="parent_address_0" name="parent_address_0" placeholder="123 Main St">
-                        </div>
-                        <div class="form-group">
-                            <label for="parent_addressTwo_0">Address Line 2</label>
-                            <input type="text" class="form-control" id="parent_addressTwo_0" name="parent_addressTwo_0" placeholder="Apt #">
-                        </div>
-                        <div class="form-group">
-                            <label for="parent_city_0">City <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                            <input type="text" class="form-control" id="parent_city_0" name="parent_city_0" placeholder="Nashville">
-                        </div>
-                        <div class="form-group">
-                            <label for='parent_state_0'>State <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                            <select class="form-control" id="parent_state_0" name="parent_state_0">
-                                <option value="AL">Alabama</option>
-                                <option value="AK">Alaska</option>
-                                <option value="AZ">Arizona</option>
-                                <option value="AR">Arkansas</option>
-                                <option value="CA">California</option>
-                                <option value="CO">Colorado</option>
-                                <option value="CT">Connecticut</option>
-                                <option value="DE">Delaware</option>
-                                <option value="DC">District Of Columbia</option>
-                                <option value="FL">Florida</option>
-                                <option value="GA">Georgia</option>
-                                <option value="HI">Hawaii</option>
-                                <option value="ID">Idaho</option>
-                                <option value="IL">Illinois</option>
-                                <option value="IN">Indiana</option>
-                                <option value="IA">Iowa</option>
-                                <option value="KS">Kansas</option>
-                                <option value="KY">Kentucky</option>
-                                <option value="LA">Louisiana</option>
-                                <option value="ME">Maine</option>
-                                <option value="MD">Maryland</option>
-                                <option value="MA">Massachusetts</option>
-                                <option value="MI">Michigan</option>
-                                <option value="MN">Minnesota</option>
-                                <option value="MS">Mississippi</option>
-                                <option value="MO">Missouri</option>
-                                <option value="MT">Montana</option>
-                                <option value="NE">Nebraska</option>
-                                <option value="NV">Nevada</option>
-                                <option value="NH">New Hampshire</option>
-                                <option value="NJ">New Jersey</option>
-                                <option value="NM">New Mexico</option>
-                                <option value="NY">New York</option>
-                                <option value="NC">North Carolina</option>
-                                <option value="ND">North Dakota</option>
-                                <option value="OH">Ohio</option>
-                                <option value="OK">Oklahoma</option>
-                                <option value="OR">Oregon</option>
-                                <option value="PA">Pennsylvania</option>
-                                <option value="RI">Rhode Island</option>
-                                <option value="SC">South Carolina</option>
-                                <option value="SD">South Dakota</option>
-                                <option value="TN" selected="selected">Tennessee</option>
-                                <option value="TX">Texas</option>
-                                <option value="UT">Utah</option>
-                                <option value="VT">Vermont</option>
-                                <option value="VA">Virginia</option>
-                                <option value="WA">Washington</option>
-                                <option value="WV">West Virginia</option>
-                                <option value="WI">Wisconsin</option>
-                                <option value="WY">Wyoming</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="parent_zip_0">Zip Code <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                            <input type="text" class="form-control" id="parent_zip_0" name="parent_zip_0" placeholder="xxxxx" maxlength="5">
-                        </div>
-                        <div class="form-group">
-                            <label for="parent_mobile_0">Mobile Phone <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                            <input type="tel" class="form-control" id="parent_mobile_0" name="parent_mobile_0" placeholder="(xxx) xxx-xxxx">
-                        </div>
-                        <div class="form-group">
-                            <label for="parent_other_phone_0">Other Phone</label>
-                            <input type="tel" class="form-control" id="parent_other_phone_0" name="parent_other_phone_0" placeholder="(xxx) xxx-xxxx">
-                        </div>
-                        <div class="form-group">
-                            <label for="parent_email_0">Email Address</label>
-                            <input type="email" class="form-control" id="parent_email_0" name="parent_email_0" placeholder="yourname@example.com">
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="parent_email_optin_0" checked="checked"> Please send me important updates by email.
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="parent_email_optin_0" checked="checked"> Please send me important updates by text message.
-                            </label>
-                        </div>
-                        <p class="mn_popover" id="email_disclaimer" data-container="body" data-toggle="popover" data-placement="top" data-content="We respect your privacy and do not tolerate spam and will never sell, rent, lease or give away your information (name, address, email, etc.) to any third party. Nor will we send you unsolicited email. If you choose to provide your cell phone number and/or email address, then we will send you notifications relating to your child, classroom activities, or important notifications (i.e. weather closings). You will have the option to opt out of notifications at any time.">How will you use this information?</p>
                     </fieldset>
-                    <div class="btn-group">
+                    <div class="form-group">
                         <button type="button" class="btn btn-primary" id="btnAdd"><i class="fa fa-plus-circle"></i> Add another parent or guardian</button>
                         <button type="button" class="btn btn-warning" id="btnDel"><i class="fa fa-minus-circle"></i> Delete parent information</button>
                     </div>
@@ -227,45 +229,49 @@
                     <p class="text-right validation_sign"><i class="fa fa-exclamation-circle"></i> Required Field</p>
                     <fieldset>
                         <legend>Income Eligibility</legend>
-                        <label>Is anyone from your household receiving benefits from <i>Family First</i>? <i class="fa fa-exclamation-circle validation_sign"></i></label>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="income_family_first_0" value="yes">
-                                Yes
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="income_family_first_0" value="no" data-toggle="form-collapse" data-target="#family_first_no">
-                                No
-                            </label>
-                        </div>
-                        <div id="family_first_no" class="collapse">
-                            <div class="form-group">
-                                <label for="income_members_0">Total Number of Household Members</label>
-                                <input type="number" class="form-control" id="income_members_0" name="income_members_0" placeholder="xx" maxlength="2">
-                            </div>
-                            <div class="form-group">
-                                <label for="income_monthly_0">Monthly income of household from all sources</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon">$</span>
-                                    <input type="number" class="form-control" id="income_monthly_0" name="income_monthly_0" placeholder="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Is anyone from your household receiving benefits from <i>Family First</i>? <i class="fa fa-exclamation-circle validation_sign"></i></label>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="income_family_first_0" value="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="income_family_first_0" value="no" data-toggle="form-collapse" data-target="#family_first_no">
+                                        No
+                                    </label>
                                 </div>
                             </div>
-                            <p class="mn_popover" id="income_disclaimer" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Household income should include earnings from work (before deductions), child support or alimony, payments received from pensions, retirement, and social security, or any other income for all household members.  Please include total yearly income for all household sources, and total number of household members.">What should I include?</p>
-                            <div class="form-group hidden">
-                                <label for="income_annual_0">Annual income of household from all sources</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon">$</span>
-                                    <input type="number" class="form-control" id="income_annual_0" name="income_annual_0" placeholder="">
+                            <div id="family_first_no" class="col-md-6 collapse">
+                                <div class="form-group">
+                                    <label for="income_members_0">Total Number of Household Members</label>
+                                    <input type="number" class="form-control" id="income_members_0" name="income_members_0" placeholder="0" maxlength="2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="income_monthly_0">Monthly income of household from all sources</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="number" class="form-control" id="income_monthly_0" name="income_monthly_0" placeholder="">
+                                    </div>
+                                </div>
+                                <p class="mn_popover" id="income_disclaimer" data-container="body" data-toggle="popover" data-placement="top" data-content="Household income should include earnings from work (before deductions), child support or alimony, payments received from pensions, retirement, and social security, or any other income for all household members.  Please include total yearly income for all household sources, and total number of household members.">What should I include?</p>
+                                <div class="form-group hidden">
+                                    <label for="income_annual_0">Annual income of household from all sources</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="number" class="form-control" id="income_annual_0" name="income_annual_0" placeholder="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                 </div>
                 <div class="nextPrev form-group">
-                    <a href="#" class="btn btn-default" id="tab-previous" data-toggle="tab">Previous Step</a>
-                    <a href="#" class="btn btn-primary pull-right" id="tab-next" data-toggle="tab">Next Step</a>
+                    <a href="#" class="btn btn-primary" id="tab-previous" data-toggle="tab">Previous Step</a>
+                    <a href="#" class="btn btn-success pull-right" id="tab-next" data-toggle="tab">Next Step</a>
                 </div>
                 <div class="submit_button hidden">
                     <button type="submit" class="btn btn-default">Submit</button>
